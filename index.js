@@ -22,7 +22,7 @@ const questions = [
       {
         // this needs to be the title of the readme
         type: "input",
-        name: "project",
+        name: "title",
         message: "What is your project's title?",
         validate: (value)=>{ if(value){return true} else {return 'I need an input to continue'}}
       },
@@ -59,13 +59,13 @@ const questions = [
       },
       {
         type: "input",
-        name: "repo1",
+        name: "usage",
         message: "What does the user need to know about using the repo?",
         validate: (value)=>{ if(value){return true} else {return 'I need an input to continue'}}
       },
       {
         type: "input",
-        name: "repo2",
+        name: "contributing",
         message: "What does the user need to know about contributing to the repo?",
         validate: (value)=>{ if(value){return true} else {return 'I need an input to continue'}}
       },
@@ -74,7 +74,7 @@ const questions = [
         name: "link",
         message: "Paste a link to a video demonstration of your project.",
         validate: (value)=>{ if(value){return true} else {return 'I need an input to continue'}}
-      },
+      }
 ];
 
 // TODO: Create a function to write README file
