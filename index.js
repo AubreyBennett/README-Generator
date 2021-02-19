@@ -10,7 +10,7 @@ const questions = [
     {
         type: "input",
         name: "username",
-        message: "What is your GitHun username?",
+        message: "What is your GitHub username?",
         validate: (value)=>{ if(value){return true} else {return 'I need an input to continue'}}
       },
       {
@@ -20,9 +20,16 @@ const questions = [
         validate: (value)=>{ if(value){return true} else {return 'I need an input to continue'}}
       },
       {
+        // this needs to be the title of the readme
         type: "input",
         name: "project",
-        message: "What is your project's name?",
+        message: "What is your project's title?",
+        validate: (value)=>{ if(value){return true} else {return 'I need an input to continue'}}
+      },
+      {
+        type: "input",
+        name: "url",
+        message: "What is the URL to the repository?",
         validate: (value)=>{ if(value){return true} else {return 'I need an input to continue'}}
       },
       {
@@ -52,34 +59,38 @@ const questions = [
       },
       {
         type: "input",
-        name: "using repo",
+        name: "repo1",
         message: "What does the user need to know about using the repo?",
         validate: (value)=>{ if(value){return true} else {return 'I need an input to continue'}}
       },
       {
         type: "input",
-        name: "constibuting repo",
+        name: "repo2",
         message: "What does the user need to know about contributing to the repo?",
         validate: (value)=>{ if(value){return true} else {return 'I need an input to continue'}}
-      }
+      },
+      {
+        type: "input",
+        name: "link",
+        message: "Paste a link to a video demonstration of your project.",
+        validate: (value)=>{ if(value){return true} else {return 'I need an input to continue'}}
+      },
 ];
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-
+  
 }
 const writeFileAsync = util.promisify(fs.writeFile);
 
-writeFileAsync("README.md", markdown)
-// writeFileAsync is promise-based, so we use .then() instead of a callback!
-    .then(() => console.log("Success!"))
-    .catch(err => console.error(err));
-
 // TODO: Create a function to initialize app
 function init() {
-    inquirer.prompt(questions).then((response)=> {
+    inquirer.prompt(questions).then((answers)=> {
 
+      return writeFileAsync("README.md", markdown)
     })
+    .then(() => console.log("Success!"))
+    .catch(err => console.error(err));
 }
 
 // Function call to initialize app
