@@ -1,17 +1,5 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
-function renderLicenseBadge(license) {}
-
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(license) {}
-
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) {}
-
 // TODO: Create a function to generate markdown for README
-function generateMarkdown(data) {
+function generateMarkdown(answers) {
   return `
   # ${answers.title}
 
@@ -19,15 +7,15 @@ function generateMarkdown(data) {
 
   -[Description](#desctiption)
   -[URL](#url)
-  -[Command to Install Dependencies](#dependencies)
-  -[Tests](#tests)
-  -[License](#license)
+  -[Installation](#dependencies)
   -[Usage](#usage)
+  -[License](#license)
   -[Contributing](#contributing)
+  -[Tests](#tests)
   -[Questions](#questions)
 
   ## Description:
-  // insert license image
+  ![License](https://img.shields.io/badge/License-${answers.license}-blue.svg "License Badge")
 
     ${answers.description}
   ## URL:
@@ -44,9 +32,9 @@ function generateMarkdown(data) {
   ## Contributing:
     ${answers.contributing}
   ## Questions:
-    If you have any questions concerning the README-Generator feel free to contact me or visit my GitHub Page.
-  -[Personal Email] ${answers.email}
+    If you have any questions concerning the README-Generator feel free to visit my GitHub Page.
   -[GitHub Page](https://github.com/${answers.username})
+    You can also reach out to me at my email: ${answers.email}.
 `;
 }
 
