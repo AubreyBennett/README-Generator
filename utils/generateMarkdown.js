@@ -1,9 +1,9 @@
-// TODO: Create a function to generate markdown for README
+// Function to generate markdown for README
 function generateMarkdown(answers) {
   return `
   # ${answers.title}
 
-  #Table of Contents
+  ## Table of Contents
 
   -[Description](#desctiption)
 
@@ -18,7 +18,7 @@ function generateMarkdown(answers) {
   -[Contributing](#contributing)
 
   -[Tests](#tests)
-  
+
   -[Questions](#questions)
 
   ## Description:
@@ -40,7 +40,9 @@ function generateMarkdown(answers) {
     ${answers.contributing}
   ## Questions:
     If you have any questions concerning the README-Generator feel free to visit my GitHub Page.
+
   -[GitHub Page](https://github.com/${answers.username})
+
     You can also reach out to me at my email: ${answers.email}.
 `;
 }

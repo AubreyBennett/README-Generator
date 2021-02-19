@@ -1,9 +1,11 @@
+// Packages
 const inquirer = require("inquirer");
 const fs = require("fs");
 const util = require("util");
 
 const generateMarkdown = require('./utils/generateMarkdown.js');
 
+// Input Prompt Questions
 const questions = [
     {
         type: "input",
@@ -76,7 +78,7 @@ const questions = [
 
 const writeFileAsync = util.promisify(fs.writeFile);
 
-// TODO: Create a function to initialize app
+// Function to initialize app
 function init() {
     inquirer.prompt(questions).then((answers)=> {
       const readMe = generateMarkdown(answers);
