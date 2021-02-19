@@ -6,12 +6,19 @@ function generateMarkdown(answers) {
   #Table of Contents
 
   -[Description](#desctiption)
+
   -[URL](#url)
+
   -[Installation](#dependencies)
+
   -[Usage](#usage)
+
   -[License](#license)
+
   -[Contributing](#contributing)
+
   -[Tests](#tests)
+  
   -[Questions](#questions)
 
   ## Description:
