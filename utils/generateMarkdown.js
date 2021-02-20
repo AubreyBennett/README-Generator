@@ -33,9 +33,11 @@ function generateMarkdown(answers) {
     ${answers.tests}
   ## License:
     For more information about the license, click on the link below:
-  - [License](https://opensource.org/;icenses/${answers.license})
+  - [License](https://opensource.org/licenses/${answers.license})
   ## Usage:
-    ${answers.usage}
+  ![Preview](https://media.giphy.com/media/xjdjPrlbfpLh7U8aOL/giphy.gif)
+  
+  ${answers.usage}
   ## Contributing:
     ${answers.contributing}
   ## Questions:
